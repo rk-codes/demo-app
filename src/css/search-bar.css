@@ -1,0 +1,12 @@
+.search-box {
+    margin: 20px;
+}
+
+.search-form input{
+    padding: 15px;
+    font-size: 12px;
+    margin-right: 10px;
+}
+.search-button {
+    padding: 10px;
+}
