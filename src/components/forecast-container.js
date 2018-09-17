@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-
+import {connect} from 'react-redux';
+import {fetchWeather} from '../actions';
 
 import SearchBar from './search-bar';
 
 
-export default class ForecastContainer extends React.Component {
+export class ForecastContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -13,9 +14,9 @@ export default class ForecastContainer extends React.Component {
     }
 
     componentDidMount() {
-
+        console.log("Mounted");
+        this.props.dispatch(fetchWeather());
     }
-
  
     handleSubmit(e){
         e.preventDefault();
@@ -33,3 +34,4 @@ export default class ForecastContainer extends React.Component {
         );
     }
 }
+export default connect()(ForecastContainer);

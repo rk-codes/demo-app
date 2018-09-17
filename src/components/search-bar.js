@@ -1,13 +1,9 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import {fetchWeather} from '../actions';
+
 import '../css/search-bar.css';
 
-export class  SearchBar extends React.Component {
-    componentDidMount() {
-        console.log("Mounted");
-        this.props.dispatch(fetchWeather());
-    }
+export default class  SearchBar extends React.Component {
+   
     render() {
         return(
             <div className="search-box">
@@ -19,4 +15,3 @@ export class  SearchBar extends React.Component {
         );
     }
 }
-export default connect()(SearchBar);
