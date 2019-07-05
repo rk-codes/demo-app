@@ -9,7 +9,8 @@ export class ForecastContainer extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            zip: ''
+            zip: '',
+            loading: false
         }
     }
 
@@ -21,7 +22,7 @@ export class ForecastContainer extends React.Component {
     handleSubmit(e){
         e.preventDefault();
         let zipcode = e.target.location.value;
-        console.log(zipcode);
+        console.log("Zipcode: ", zipcode);
         this.setState({
             zip: zipcode
         })
